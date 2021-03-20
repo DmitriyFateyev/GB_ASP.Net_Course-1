@@ -1,6 +1,6 @@
 ﻿namespace WebStore.Models
 {
-    public class Employees
+    public class Employee
     {
         public int id { get; set; }
         public string Name { get; set; }

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebStore.Models.Employees>
+﻿@model IEnumerable<WebStore.Models.Employee>
 <!DOCTYPE html>
 
 <html>
@@ -16,6 +16,16 @@
                 <th>Patronymic</th>
                 <th>Age</th>
             </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@item.id</th>
+                    <th>@item.Name</th>
+                    <th>@item.Lastname</th>
+                    <th>@item.Patronymic</th>
+                    <th>@item.Age</th>
+                </tr>
+            }
         </thead>
     </table>
 </body>
