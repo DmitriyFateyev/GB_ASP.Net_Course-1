@@ -1,13 +1,14 @@
 ﻿@model IEnumerable<WebStore.Models.Employee>
-
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Employees List</title>
+    <title>Employees</title>
 </head>
 <body>
+    <h1>Testing employees controller page</h1>
+
     <table border="1">
         <thead>
             <tr>
@@ -26,7 +27,7 @@
                     <th>@item.Name</th>
                     <th>@item.Patronymic</th>
                     <th>@item.Age</th>
-                    <th><a asp-action></a></th>
+                    <th><a href="~/Employees/Details/@item.id">Details</a></th>
                 </tr>
             }
         </thead>
