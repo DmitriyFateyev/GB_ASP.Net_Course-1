@@ -7,5 +7,11 @@ namespace WebStore.Controllers
         public IActionResult Index() => View();
 
         public IActionResult SecondAction() => Content("Second action method");
+
+        public IActionResult Shop() => View();
+
+        public IActionResult ProductDetails() => View();
+
+        public IActionResult Login() => View();
     }
 }

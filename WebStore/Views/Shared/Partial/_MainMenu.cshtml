@@ -1,9 +1,9 @@
 ﻿<ul class="nav navbar-nav collapse navbar-collapse">
     <li><a asp-controller="Home" asp-action="Index" class="active">Home</a></li>
     <li class="dropdown">
-        <a href="#">Shop<i class="fa fa-angle-down"></i></a>
+        <a asp-controller="Home" asp-action="Shop">Shop<i class="fa fa-angle-down"></i></a>
         <ul role="menu" class="sub-menu">
-            <li><a href="#">Products</a></li>
+            <li><a asp-controller="Home" asp-action="ProductDetails">Products</a></li>
             <li><a href="#">Product Details</a></li>
             <li><a href="#">Checkout</a></li>
             <li><a href="#">Cart</a></li>
