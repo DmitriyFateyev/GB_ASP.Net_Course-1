@@ -4,20 +4,20 @@
         <a asp-controller="Home" asp-action="Shop">Shop<i class="fa fa-angle-down"></i></a>
         <ul role="menu" class="sub-menu">
             <li><a asp-controller="Home" asp-action="ProductDetails">Products</a></li>
-            <li><a href="#">Product Details</a></li>
-            <li><a href="#">Checkout</a></li>
-            <li><a href="#">Cart</a></li>
+            <li><a asp-controller="Home" asp-action="ProductDetails">Product Details</a></li>
+            <li><a asp-controller="Home" asp-action="Checkout">Checkout</a></li>
+            <li><a asp-controller="Home" asp-action="Cart">Cart</a></li>
             <li><a asp-controller="Home" asp-action="Login">Login</a></li>
         </ul>
     </li>
     <li class="dropdown">
-        <a href="#">Blog<i class="fa fa-angle-down"></i></a>
+        <a asp-controller="Home" asp-action="Blog">Blog<i class="fa fa-angle-down"></i></a>
         <ul role="menu" class="sub-menu">
-            <li><a href="#">Blog List</a></li>
-            <li><a href="#">Blog Single</a></li>
+            <li><a asp-controller="Home" asp-action="BlogList">Blog List</a></li>
+            <li><a asp-controller="Home" asp-action="BlogSingle">Blog Single</a></li>
         </ul>
     </li>
-    <li><a href="#">404</a></li>
+    <li><a asp-controller="Home" asp-action="404">404</a></li>
     <li><a asp-controller="Home" asp-action="ContactUs">Contact</a></li>
     <li><a asp-controller="Employees" asp-action="EmployeesList">Employees</a></li>
 </ul>
