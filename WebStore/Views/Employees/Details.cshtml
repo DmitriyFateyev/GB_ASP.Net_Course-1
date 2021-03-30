@@ -6,22 +6,22 @@
 
 <div class="container">
     <table class="table">
-        <thead>
-            <tr>
-                <th>id</th>
-                <th>Lastname</th>
-                <th>Firstname</th>
-                <th>Patronymic</th>
-                <th>Age</th>
-            </tr>
-            <tr>
-                <th>@Model.id</th>
-                <th>@Model.Lastname</th>
-                <th>@Model.Name</th>
-                <th>@Model.Patronymic</th>
-                <th>@Model.Age</th>
-            </tr>
-        </thead>
+        <tr>
+            <th>id</th>
+            <th>Lastname</th>
+            <th>Firstname</th>
+            <th>Patronymic</th>
+            <th>Age</th>
+            <th>e-mail</th>
+        </tr>
+        <tr>
+            <th>@Model.id</th>
+            <th>@Model.Lastname</th>
+            <th>@Model.Name</th>
+            <th>@Model.Patronymic</th>
+            <th>@Model.Age</th>
+            <th>@Model.email</th>
+        </tr>
     </table>
     <hr />
     <a asp-controller="Employees" asp-action="EmployeesList">Back</a>

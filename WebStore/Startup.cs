@@ -30,6 +30,8 @@ namespace WebStore
 
             app.UseStaticFiles();
 
+            //app.UseWelcomePage();
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
