@@ -25,12 +25,12 @@ namespace WebStore
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
             }
 
             app.UseStaticFiles();
 
-            //app.UseWelcomePage();
+            app.UseWelcomePage("/WelcomePage");
 
             app.UseRouting();
 

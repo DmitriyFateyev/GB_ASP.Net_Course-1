@@ -15,6 +15,7 @@ namespace WebStore.Controllers
         };
 
 
+        [Route("users")]
         public IActionResult EmployeesList() => View(_Employees);
 
         public IActionResult Details(int id)
