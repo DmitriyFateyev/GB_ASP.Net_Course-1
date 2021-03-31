@@ -15,9 +15,10 @@ namespace WebStore.Controllers
         };
 
 
-        [Route("users")]
+        //[Route("users")]
         public IActionResult EmployeesList() => View(_Employees);
 
+        //[ActionName("{id}")]                                            // not working
         public IActionResult Details(int id)
         {
             var employee = _Employees.FirstOrDefault(e => e.id == id);
