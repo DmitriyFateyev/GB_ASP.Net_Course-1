@@ -1,13 +1,18 @@
-﻿<!DOCTYPE html>
+﻿<partial name="Partial/_slider"/>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <h1>Hello from first View!</h1>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <partial name="Partial/_LeftSideBar" />
+            </div>
+                <div class="col-sm-9 padding-right">
+                    <partial name="Partial/_FeaturesItems" />
 
-    <a href="~/Employees/EmployeesList">Employees list</a>
-</body>
-</html>
+                    <partial name="Partial/_CategoryTab" />
+
+                    <partial name="Partial/_RecommendedItems" />
+                </div>
+        </div>
+    </div>
+</section>

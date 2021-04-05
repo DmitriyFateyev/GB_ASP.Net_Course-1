@@ -1,15 +1,11 @@
 ﻿@model IEnumerable<WebStore.Models.Employee>
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Employees</title>
-</head>
-<body>
-    <h1>Testing employees controller page</h1>
+@{ 
+    ViewData["Title"] = "Employees List";
+}
 
-    <table border="1">
+<div class="container">
+    <table class="table">
         <thead>
             <tr>
                 <th>id</th>
@@ -27,12 +23,11 @@
                     <th>@item.Name</th>
                     <th>@item.Patronymic</th>
                     <th>@item.Age</th>
-                    <th><a href="~/Employees/Details/@item.id">Details</a></th>
+                    <th><a asp-controller="Employees" asp-action="Details" asp-route-id="@item.id">Details</a></th>
                 </tr>
             }
         </thead>
     </table>
     <hr />
-    <a href="~/Home/Index">Back</a>
-</body>
-</html>
+    <a asp-controller="Home" asp-action="Index">Home</a>
+</div>

@@ -1,20 +1,11 @@
 ﻿@model WebStore.Models.Employee
-@{
-    Layout = null;
+
+@{ 
+    ViewData["Title"] = "Details";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
-    <h1>id:@Model.id employee details page</h1>
-    <hr />
-
-    <table border="1">
+<div class="container">
+    <table class="table">
         <thead>
             <tr>
                 <th>id</th>
@@ -33,6 +24,5 @@
         </thead>
     </table>
     <hr />
-    <a href="~/Employees/EmployeesList">Back</a>
-</body>
-</html>
+    <a asp-controller="Employees" asp-action="EmployeesList">Back</a>
+</div>
