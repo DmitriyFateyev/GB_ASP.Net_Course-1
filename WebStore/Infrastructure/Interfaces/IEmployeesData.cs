@@ -9,7 +9,7 @@ namespace WebStore.Infrastructure.Interfaces
 
         Employee GetByID(int id);
 
-        void EditEmployee();    //Commit
+        void Commit();
 
         void CreateEmployee(Employee employee); // AddNew
 

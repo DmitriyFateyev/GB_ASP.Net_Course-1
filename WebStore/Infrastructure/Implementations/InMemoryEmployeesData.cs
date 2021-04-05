@@ -35,9 +35,9 @@ namespace WebStore.Infrastructure.Implementations
             }
         }
 
-        public void EditEmployee()
+        public void Commit()
         {
-            throw new NotImplementedException();
+            // TODO:
         }
 
         public IEnumerable<Employee> GetAll()

@@ -5,7 +5,7 @@
 }
 
 <div class="container">
-    <table class="table">
+    <table class="table table-bordered">
         <tr>
             <th>id</th>
             <th>Lastname</th>
@@ -13,16 +13,18 @@
             <th>Patronymic</th>
             <th>Age</th>
             <th>e-mail</th>
+            <th>Edit</th>
         </tr>
         <tr>
-            <th>@Model.id</th>
-            <th>@Model.Lastname</th>
-            <th>@Model.Name</th>
-            <th>@Model.Patronymic</th>
-            <th>@Model.Age</th>
-            <th>@Model.email</th>
+            <td>@Model.id</td>
+            <td>@Model.Lastname</td>
+            <td>@Model.Name</td>
+            <td>@Model.Patronymic</td>
+            <td>@Model.Age</td>
+            <td>@Model.email</td>
+            <td><a asp-action="Edit" asp-route-id="@Model.id" class="btn btn-success">Edit</a></td>
         </tr>
     </table>
     <hr />
-    <a asp-controller="Employees" asp-action="EmployeesList">Back</a>
+    <a asp-controller="Employees" asp-action="EmployeesList">Back to List</a>
 </div>
