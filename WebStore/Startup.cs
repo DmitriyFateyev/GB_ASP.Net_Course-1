@@ -23,6 +23,8 @@ namespace WebStore
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
             services.AddSingleton<IEmployeesData, InMemoryEmployeesData>();
+
+            services.AddTransient<IProductData, InMemoryProductData>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
