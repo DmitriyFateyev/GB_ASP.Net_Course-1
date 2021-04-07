@@ -2,6 +2,7 @@
 using System.Linq;
 using WebStore.Infrastructure.Interfaces;
 using WebStore.Models;
+using WebStore.ViewModels;
 
 namespace WebStore.Controllers
 {
@@ -73,6 +74,32 @@ namespace WebStore.Controllers
             }
 
             return View(employee);
+        }
+
+        [Route("delete/{id}")]
+        public IActionResult Delete(int id)
+        {
+            if (id <= 0) return BadRequest();
+
+            var employee = _employeesData.GetByID(id);
+
+            if (employee is null) return NotFound();
+
+            return View(new EmployeeViewModel
+            {
+                id = employee.id,
+                Name = employee.Name,
+                Lastname = employee.Lastname,
+                Patronymic = employee.Patronymic,
+                Age = employee.Age,
+                email = employee.email
+            });
+        }
+
+        public IActionResult DeleteConfirmed(int id)
+        {
+            _employeesData.DeleteEmployee(id);
+            return RedirectToAction("EmployeesList");
         }
     }
 }
