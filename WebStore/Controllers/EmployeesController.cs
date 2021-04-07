@@ -25,7 +25,7 @@ namespace WebStore.Controllers
             return View(employee);
         }
 
-        [Route("edit/{id}")]
+        [Route("edit/{id?}")]
         public IActionResult Edit(int? id)
         {
             Employee employee;
@@ -43,7 +43,7 @@ namespace WebStore.Controllers
         }
 
         [HttpPost]
-        [Route("edit/{id}")]
+        [Route("edit/{id?}")]
         public IActionResult Edit(Employee employee)
         {
             if (ModelState.IsValid)
