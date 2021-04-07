@@ -1,9 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebStore.Models
 {
     public class Employee
     {
+        [HiddenInput(DisplayValue = false)]
         public int id { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Name field is required")]
