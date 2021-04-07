@@ -10,7 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\Implementations\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

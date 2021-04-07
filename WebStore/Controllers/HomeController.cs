@@ -12,7 +12,7 @@ namespace WebStore.Controllers
         public IActionResult ExceptionTest()
         {
             throw new ApplicationException("__!!! Testing Exception !!!__");
-            return View();
+            //return View();
         }
 
         public IActionResult Shop() => View();
