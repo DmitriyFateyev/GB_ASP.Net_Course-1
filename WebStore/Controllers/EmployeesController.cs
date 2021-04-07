@@ -46,28 +46,33 @@ namespace WebStore.Controllers
         [Route("edit/{id}")]
         public IActionResult Edit(Employee employee)
         {
-            if(employee.id > 0)
+            if (ModelState.IsValid)
             {
-                var editEmployee = _employeesData.GetByID(employee.id);
-
-                if (editEmployee is null)
+                if (employee.id > 0)
                 {
-                    return NotFound();
+                    var editEmployee = _employeesData.GetByID(employee.id);
+
+                    if (editEmployee is null)
+                    {
+                        return NotFound();
+                    }
+
+                    editEmployee.Name = employee.Name;
+                    editEmployee.Lastname = employee.Lastname;
+                    editEmployee.Patronymic = employee.Patronymic;
+                    editEmployee.Age = employee.Age;
+                    editEmployee.email = employee.email;
                 }
+                else
+                {
+                    _employeesData.CreateEmployee(employee);
+                }
+                _employeesData.Commit();
 
-                editEmployee.Name = employee.Name;
-                editEmployee.Lastname = employee.Lastname;
-                editEmployee.Patronymic = employee.Patronymic;
-                editEmployee.Age = employee.Age;
-                editEmployee.email = employee.email;
+                return RedirectToAction(nameof(EmployeesList)); 
             }
-            else
-            {
-                _employeesData.CreateEmployee(employee);
-            }
-            _employeesData.Commit();
 
-            return RedirectToAction(nameof(EmployeesList));
+            return View(employee);
         }
     }
 }
