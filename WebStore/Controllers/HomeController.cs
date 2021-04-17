@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace WebStore.Controllers
 {
@@ -7,6 +8,12 @@ namespace WebStore.Controllers
         public IActionResult Index() => View();
 
         public IActionResult SecondAction() => Content("Second action method");
+
+        public IActionResult ExceptionTest()
+        {
+            throw new ApplicationException("__!!! Testing Exception !!!__");
+            //return View();
+        }
 
         public IActionResult Shop() => View();
 

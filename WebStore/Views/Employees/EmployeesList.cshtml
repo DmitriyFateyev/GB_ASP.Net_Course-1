@@ -1,33 +1,39 @@
 ﻿@model IEnumerable<WebStore.Models.Employee>
 
-@{ 
+@{
     ViewData["Title"] = "Employees List";
 }
 
-<div class="container">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>id</th>
-                <th>Lastname</th>
-                <th>Firstname</th>
-                <th>Patronymic</th>
-                <th>Age</th>
-                <th>Details</th>
-            </tr>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <th>@item.id</th>
-                    <th>@item.Lastname</th>
-                    <th>@item.Name</th>
-                    <th>@item.Patronymic</th>
-                    <th>@item.Age</th>
-                    <th><a asp-controller="Employees" asp-action="Details" asp-route-id="@item.id">Details</a></th>
-                </tr>
-            }
-        </thead>
-    </table>
-    <hr />
-    <a asp-controller="Home" asp-action="Index">Home</a>
-</div>
+<hr />
+<a asp-controller="Employees" asp-action="Edit" class="btn btn-success">Добавить</a>
+<hr />
+
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>Lastname</th>
+        <th>Firstname</th>
+        <th>Patronymic</th>
+        <th>Age</th>
+        <th>e-mail</th>
+        <th>Control</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.id</td>
+            <td>@item.Lastname</td>
+            <td>@item.Name</td>
+            <td>@item.Patronymic</td>
+            <td>@item.Age</td>
+            <td>@item.email</td>
+            <td>
+                <a asp-controller="Employees" asp-action="Details" asp-route-id="@item.id" class="fa fa-info"></a>
+                <a asp-controller="Employees" asp-action="Edit" asp-route-id="@item.id" class="fa fa-edit"></a>
+                <a asp-controller="Employees" asp-action="Delete" asp-route-id="@item.id" class="fa fa-cut"></a>
+            </td>
+        </tr>
+    }
+</table>
+<hr />
+<div><a asp-controller="Home" asp-action="Index" class="btn btn-default">Back to Home</a></div>
