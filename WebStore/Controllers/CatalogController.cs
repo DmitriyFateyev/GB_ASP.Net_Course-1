@@ -12,6 +12,7 @@ namespace WebStore.Controllers
 
         public CatalogController(IProductData ProductData) => _ProductData = ProductData;
 
+        [Route("Index")]
         public IActionResult Index(int? brandId, int? sectionId)
         {
             var filter = new ProductFilter
